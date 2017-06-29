@@ -26,9 +26,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lobster", "Helvetica Neue", cursive, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 5px;
 }
 hr.star-light,
 hr.star-primary {
@@ -68,7 +69,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: url("img/skyline.jpg") center -400px;
+  background: url("img/skyline.jpg") center -300px;
   color: red;
 }
 header .container {
@@ -214,6 +215,11 @@ section.success {
 }
 #portfolio .portfolio-item .portfolio-link .caption:hover {
   opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .img-responsive {
+  width: 400px;
+  height: 288.88px;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
@@ -459,6 +465,10 @@ fieldset[disabled] .btn-success.active {
   top: 25px;
   right: 25px;
   cursor: pointer;
+}
+.portfolio-modal .modal-body .img-responsive_img-centered {
+  width:690px; 
+  height:498.32px;
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
