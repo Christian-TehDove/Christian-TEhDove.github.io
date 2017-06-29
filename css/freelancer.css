@@ -68,8 +68,8 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18BC9C;
-  color: white;
+  background: url("img/skyline.jpg") center -400px;
+  color: red;
 }
 header .container {
   padding-top: 100px;
@@ -285,7 +285,7 @@ section.success {
 }
 .floating-label-form-group-with-focus label {
   color: #18BC9C;
-}
+} 
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
