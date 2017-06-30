@@ -69,7 +69,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: url("img/skyline.jpg") center -300px;
+  background: url("img/skyline.jpg") center -350px;
   color: red;
 }
 header .container {
