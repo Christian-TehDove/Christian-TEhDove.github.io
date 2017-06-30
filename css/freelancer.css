@@ -51,18 +51,18 @@ hr.star-primary:after {
   padding: 0 0.25em;
 }
 hr.star-light {
-  border-color: white;
+  border-color:#10b6cf;
 }
 hr.star-light:after {
-  background-color: #18BC9C;
-  color: white;
+  background-color:#6a7072;
+  color: red;
 }
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: red;
 }
 hr.star-primary:after {
   background-color: white;
-  color: #2C3E50;
+  color: blue;
 }
 .img-centered {
   margin: 0 auto;
@@ -104,7 +104,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: #aecbe8;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -126,7 +126,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #6a7072;
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -134,13 +134,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #6a7072;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #6a7072;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -150,9 +150,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #6a7072;
   color: white;
-  border-color: #18BC9C;
+  border-color: #6a7072;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -182,7 +182,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: #6a7072;
   color: white;
 }
 @media (max-width: 767px) {
@@ -290,7 +290,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: #6a7072;
 } 
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -482,7 +482,7 @@ fieldset[disabled] .btn-success.active {
   -ms-transform: rotate(45deg);
   /* IE 9 */
   -webkit-transform: rotate(45deg);
-  /* Safari and Chrome */
+  /* Sa`ri and Chrome */
   z-index: 1051;
 }
 .portfolio-modal .close-modal .lr .rl {
