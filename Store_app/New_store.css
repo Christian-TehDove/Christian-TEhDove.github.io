@@ -52,7 +52,7 @@ h2 {
 
 p {
 	font-family: 'Kaushan Script', cursive;
-	font-size: 2em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	color: black;
 	padding: 0px;
@@ -231,7 +231,7 @@ body {
 section.whiteBoard {
 	background-color: #FCFBE6;
 	background-color: rgba(252,251,243,0.7);
-	margin: 20px 0 0 100px;
+	margin: 20px 0 0 150px;
 	padding: 1.5em  0 2.0em 1.5em;
 	display: inline-block;
 	border-radius: 2em;
@@ -295,4 +295,18 @@ footer a:hover {
 div.clear {
 	clear: both;
 	font-size: 1%;
+}
+
+button {
+	color: #C64322;
+	background-color: #FFF;
+	display: inline-block;
+	margin: 0 0.75em 0 0;
+	padding: 0.2em 0.5em;
+	border: 1px solid #C64322;
+	text-transform: uppercase;
+}
+button:hover {
+	background-color: #FBF3DB;
+	border: 1px solid #745b2f;
 }
