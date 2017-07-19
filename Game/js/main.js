@@ -145,7 +145,7 @@ PlayState.preload = function () {
     this.game.load.json('level:0', 'data/level00.json');
     this.game.load.json('level:1', 'data/level01.json');
 
-    this.game.load.image('background', 'images/background.png');
+    this.game.load.image('background', 'images/animated-rain.gif');
     this.game.load.image('icon:coin', 'images/coin_icon.png');
     this.game.load.image('font:numbers', 'images/numbers.png');
     this.game.load.image('key', 'images/key.png');
@@ -160,6 +160,7 @@ PlayState.preload = function () {
     this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
     this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
+    this.game.load.spritesheet('atmosphere', 'images/atmosphere.png', 42, 66)
     this.game.load.image('invisible-wall', 'images/invisible_wall.png');
 
     this.game.load.audio('sfx:jump', 'audio/jump.wav');
@@ -179,7 +180,7 @@ PlayState.create = function () {
         door: this.game.add.audio('sfx:door'),
     };
 
-	this.game.add.image(0, 0, 'background');
+    this.game.add.image(0, 0, 'background');
     this._loadLevel(this.game.cache.getJSON(`level:${this.level}`));
     this._createHud();
 };
@@ -256,7 +257,7 @@ PlayState._loadLevel = function (data) {
     // spawns door
     this._spawnDoor(data.door.x, data.door.y)
     //spawn hero and enemies
-    this._spawnCharacters({hero: data.hero, spiders: data.spiders});
+    this._spawnCharacters({hero: data.hero, spiders: data.spiders, atmosphere: data.atmosphere});
     // spawn important objects
     data.coins.forEach(this._spawnCoin, this);
     // enable gravity
@@ -277,6 +278,9 @@ PlayState._spawnPlatform = function (platform) {
 };
 
 PlayState._spawnCharacters = function (data) {
+    // spawn atmosphere
+    this.atmosphere = new Hero(this.game, data.atmosphere.x, data.atmosphere.y);
+    this.game.add.existing(this.atmosphere);
     // spawn hero
     this.hero = new Hero(this.game, data.hero.x, data.hero.y);
     this.game.add.existing(this.hero);
