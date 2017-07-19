@@ -160,7 +160,6 @@ PlayState.preload = function () {
     this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
     this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
-    this.game.load.spritesheet('atmosphere', 'images/atmosphere.png', 42, 66)
     this.game.load.image('invisible-wall', 'images/invisible_wall.png');
 
     this.game.load.audio('sfx:jump', 'audio/jump.wav');
@@ -257,7 +256,7 @@ PlayState._loadLevel = function (data) {
     // spawns door
     this._spawnDoor(data.door.x, data.door.y)
     //spawn hero and enemies
-    this._spawnCharacters({hero: data.hero, spiders: data.spiders, atmosphere: data.atmosphere});
+    this._spawnCharacters({hero: data.hero, spiders: data.spiders});
     // spawn important objects
     data.coins.forEach(this._spawnCoin, this);
     // enable gravity
@@ -278,9 +277,6 @@ PlayState._spawnPlatform = function (platform) {
 };
 
 PlayState._spawnCharacters = function (data) {
-    // spawn atmosphere
-    this.atmosphere = new Hero(this.game, data.atmosphere.x, data.atmosphere.y);
-    this.game.add.existing(this.atmosphere);
     // spawn hero
     this.hero = new Hero(this.game, data.hero.x, data.hero.y);
     this.game.add.existing(this.hero);
